@@ -82,6 +82,7 @@ export default {
         height: 500px;
         background-color: aqua;
         width: 72em;
+        display: block;
     }
     h2{
         width: 400px;
