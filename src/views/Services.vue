@@ -56,17 +56,31 @@
         <div class="mail">
                <div class="right">
                <h1>WHO CAN USE SHOPMECHO</h1>
-                <ul>
+                <ul class="desktop">
                 <li v-for="email in emails" :key="email" @click="detailMail=email">
                     <p>{{ email.subject}}</p>
                 </li>
                 </ul>
                </div>
+               
+               
             <email-details :email="detailMail" class="new"></email-details>
         </div>
 
 
   
+  
+                    <div :class="!email.mobile ? 'mobile' :'mobile-show' " v-for="email in emails" :key="email.id" @click="bigi(email.id)">
+                    <p>{{email.subject}}</p>
+                    <div class="shakur">
+                        <h1>{{email.subject}}</h1>
+    
+                <p>{{email.message}}</p>
+
+                <img :src= "require('@/assets/' + email.image)"  alt=""/>
+             </div>
+       
+               </div>
 
 
 
@@ -93,21 +107,25 @@ export default {
     },
     data(){
        return{
+           
          detailMail:null,
          emails:  [
             {
+                    mobile: false,
                 id:1,
                 subject: 'car Owners',
                 message: 'Rogers are blown out of their trajectory into an orbit which',
                 image: "about-us.jpg"
             },
             {
+                mobile: false,
                 id:2,
                 subject: 'Auto Repair Shop',
                 message: 'Rogers are blown out of their trajectory into an orbit which',
                 image: "about-us.jpg"
             },
             {
+                mobile: false,
                 id:3,
                 subject: 'Vehicle Workshop Owners',
                 message: 'Rogers are blown out of their trajectory into an orbit which',
@@ -120,12 +138,14 @@ export default {
                 image: "about-us.jpg"
             },
             {
+                mobile: false,
                 id:5,
                 subject: 'Automobile Mechanics ',
                 message: 'Rogers are blown out of their trajectory into an orbit which',
                 image: "about-us.jpg"
             },
             {
+                mobile: false,
                 id:6,
                 subject: 'Automobile Technician',
                 message: 'Rogers are blown out of their trajectory into an orbit which',
@@ -133,42 +153,49 @@ export default {
             },
         
         {
+            mobile: false,
                 id:7,
                 subject: 'Automobile Parts sellers',
                 message: 'Rogers are blown out of their trajectory into an orbit which',
                 image: "about-us.jpg"
             },
             {
+                mobile: false,
                 id:8,
                 subject: 'Automobile Washing Centres',
                 message: 'Rogers are blown out of their trajectory into an orbit which',
                 image: "about-us.jpg"
             },
             {
+                mobile: false,
                 id:9,
                 subject: 'Vehicle Tyre Workshops ',
                 message: 'Rogers are blown out of their trajectory into an orbit which',
                 image: "offer-img.jpg"
             },
             {
+                mobile: false,
                 id:10,
                 subject: 'Body work specialists',
                 message: 'Rogers are blown out of their trajectory into an orbit which',
                 image: "about-us.jpg"
             },
             {
+                mobile: false,
                 id:11,
                 subject: 'Auto Ac conditioning ',
                 message: 'Rogers are blown out of their trajectory into an orbit which',
                 image: "about-us.jpg"
             },
             {
+                mobile: false,
                 id:12,
                 subject: 'Toll service providers ',
                 message: 'Rogers are blown out of their trajectory into an orbit which',
                 image: "offer-img.jpg"
             },
              {
+                 mobile: false,
                 id:13,
                 subject: 'Logistics services provider ',
                 message: 'Rogers are blown out of their trajectory into an orbit which',
@@ -182,12 +209,22 @@ export default {
     },
     mounted(){
            this.detailMail=this.emails[0]
-       }
+       },
+       methods:{
+           bigi(id){
+              const dataIndex = this.emails.findIndex(doc => doc.id==id)
+              this.emails[dataIndex].mobile = !this.emails[dataIndex].mobile
+              console.log(dataIndex)
+       } 
     
+}
 }
 </script>
 
 <style scoped>
+.mobile{
+    display: none;
+}
 
 .right{
     background: url('../assets/offer-img.jpg');
@@ -274,7 +311,10 @@ export default {
 
   @media screen and (max-width: 480px) {
 
- 
+     
+      .desktop{
+          display: none;
+      }
      .second{
       width: 400px;
       padding-left: 20px;
@@ -297,6 +337,7 @@ export default {
     display: flex;
     flex-direction: column;
     background-color: #dfb871;
+    justify-content: center;
 }
 .new{
     margin-top: 5em;
@@ -306,6 +347,7 @@ export default {
 ul{
     display: flex;
     justify-content: space-around;
+    margin-left: 20em;
 }
 .right{
     background: url('../assets/offer-img.jpg');
@@ -313,16 +355,39 @@ ul{
     height: 70vh;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    
     background-size: cover;
     color: #fff;
+    padding-left: 20em;
 }
 li{
     margin-left: 10px;
 }
 .right h1{
     background-color: #000;
+    margin-left: -100px;
+    width: 150px;
+
 }
+.new{
+    display: none;
+}
+ .mobile{
+     display: block;
+          position: relative;
+          overflow: hidden;
+          height: 4vh;
+          transition: all 0.3s ease-in-out;
+      }
+      .mobile-show{
+          display: block;
+          position: relative;
+          overflow: hidden;
+          height: 50vh;
+          transition: all 0.3s ease-in-out;
+      }
+
+
    
 }
 
