@@ -58,6 +58,9 @@ export default {
     
 }
 @media screen and (max-width: 480px) {
+    .cover{
+        overflow: hidden;
+    }
    
    .product{
     background-color: antiquewhite;

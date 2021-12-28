@@ -81,6 +81,9 @@ export default {
 </script>
 
 <style scoped>
+.all{
+           overflow: hidden;
+       }
 .general{
 
         margin-left: 20em;
@@ -111,6 +114,7 @@ h1{
 }
 p{
     text-align: center;
+    width: 500px;
 }
 .para{
     width: 40em;
@@ -120,7 +124,7 @@ p{
 .quest{
     background: #a3d3ec;
     padding: 20px;
-    width: 90%;
+    width: 100%;
     margin-top: -150px;
     margin-bottom: 40px;
     
@@ -167,16 +171,18 @@ button{
          flex-direction: column;
          max-width: 0px;
          margin-left: -10px;
+         overflow: hidden;
+
          
 }
     h1{
     text-align: center;
-    width: 250px;
+    width: 350px;
     padding-left: 80px;
 }
 p{
     text-align: center;
-    width: 150px;
+    width: 350px;
     padding-left: 100px;
 }
     .para{

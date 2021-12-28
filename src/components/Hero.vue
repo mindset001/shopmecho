@@ -1,5 +1,5 @@
 <template >
-    <div style="overflow:hidden">
+    <div class="all">
 
         <div class="hero">
         
@@ -44,7 +44,7 @@ export default {
         padding-left: 10%;
         background-image: url('../assets/background-2.jpg');
         color:#fff;
-        height: 72.5vh;
+        height: 85.5vh;
     }
     span{
         color: #0077b6;
@@ -69,7 +69,7 @@ export default {
         width: 20px;
     }
     button{
-        width: 150px;
+        width: 250px;
         height: 50px;
         background: #0077b6;
         outline: none;
@@ -81,6 +81,10 @@ export default {
    
 
    @media screen and (max-width: 480px) {
+
+       .all{
+           overflow: hidden;
+       }
  .hero{
         display: flex;
         flex-direction: column;
@@ -93,12 +97,12 @@ export default {
         width: 40px;
     }
      .text{
-        margin-top: -2000px;
+        margin-top: -1000px;
         color: #fff;
     }
     h1{
         font-size: 3em;
-        margin-top: -500px;
+        margin-top: -300px;
     }
     h2{
         font-size: 2em;
@@ -123,6 +127,7 @@ export default {
         border-radius: 10px;
         color: #fff;
         font-weight: bold;
+        margin-left: 80px;
     }
 }
 </style>

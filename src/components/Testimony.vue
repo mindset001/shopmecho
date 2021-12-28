@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="all">
         <div class="general">
             <div class="left">
         <h1>TESTIMONIAL</h1>
@@ -210,6 +210,9 @@ export default {
 }
 
 @media screen and (max-width: 480px) {
+    .all{
+           overflow: hidden;
+       }
    
    .general{
         display: flex;
@@ -248,6 +251,14 @@ export default {
     }
     .none{
         display: none;
+    }
+
+
+    .line{
+        background: #a3d3ec;
+        width: 350px;
+        height: 2px;
+        margin-top: 40px;
     }
 
 }

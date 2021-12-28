@@ -36,3 +36,9 @@ export default {
 }
 }
 </script>
+
+<style scoped>
+.home{
+  overflow: hidden;
+}
+</style>
