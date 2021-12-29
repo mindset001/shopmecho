@@ -71,7 +71,7 @@
   
   
                     <div :class="!email.mobile ? 'mobile' :'mobile-show' " v-for="email in emails" :key="email.id" @click="bigi(email.id)">
-                    <p>{{email.subject}}</p>
+                    <p class="para">{{email.subject}}</p>
                     <div class="shakur">
                         <h1>{{email.subject}}</h1>
     
@@ -322,15 +322,54 @@ export default {
       text-align: center;
      }
 
-     
-        .third{
+   
+  .third{
       display: flex;
+      justify-content: space-around;
       flex-direction: column;
-      padding-left: 20px;
-      width: 2000px;
+      padding-right: 20em; 
+      margin-left: -300px;
+      width: 70em;
+      margin-bottom: -200px;
   }
-    .content p{
-      width: 500px;
+  .cover{
+
+         margin-right: 20px;
+         margin-left: 20px;
+         margin-bottom: 0px;
+  }
+  .cover h5{
+      font-size: 14px;
+      font-weight: 200;
+      padding-left: 20px;
+      padding-top: 10px;
+  }
+  .content{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .content p{
+      width: 200px;
+  }
+   .figure{
+         width: 70px;
+         height: 70px;
+         border-radius: 50%;
+         border: solid 5px rgb(219, 215, 215);
+         display: flex;
+         justify-content: center;
+         align-items: center;
+
+         margin-left: -120px;
+     }
+       .cover h5{
+      font-size: 14px;
+      font-weight: 200;
+      padding-left: 20px;
+      padding-top: 10px;
+      width: 320px;
+      margin-bottom: 40px;
   }
   .mail{
      margin-top: 13em;
@@ -352,21 +391,21 @@ ul{
 .right{
     background: url('../assets/offer-img.jpg');
     width:100%;
-    height: 70vh;
+    height: 40vh;
     display: flex;
-    justify-content: flex-end;
-    
+    justify-content: center;
     background-size: cover;
     color: #fff;
-    padding-left: 20em;
+    padding-left: 10em;
 }
 li{
     margin-left: 10px;
 }
 .right h1{
     background-color: #000;
-    margin-left: -100px;
-    width: 150px;
+    width: 550px;
+    font-size: 24px;
+    text-align: center;
 
 }
 .new{
@@ -376,8 +415,9 @@ li{
      display: block;
           position: relative;
           overflow: hidden;
-          height: 4vh;
+          height: 8vh;
           transition: all 0.3s ease-in-out;
+          
       }
       .mobile-show{
           display: block;
@@ -387,8 +427,19 @@ li{
           transition: all 0.3s ease-in-out;
       }
 
+      .para{
+          background: #dfb871;
+          width: 250px;
+          margin-bottom: 20px;
+          margin-left: 5em;
+          margin-top: 1em;
+          text-align: center;
+      }
 
-   
+
+   .all{
+       overflow: hidden;
+   }
 }
 
 </style>
