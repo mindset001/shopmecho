@@ -124,23 +124,32 @@ p{
 .quest{
     background: #a3d3ec;
     padding: 20px;
-    width: 100%;
-    margin-top: -150px;
+    width: 65%;
+    margin-top: -100px;
     margin-bottom: 40px;
+    text-align: center;
     
+}
+.quest h1{
+    font-size: 24px;
+
+}
+.quest p{
+    text-align: center;
+
 }
 .right{
     margin-left: 30px;
 }
 form{
     box-shadow: 1px 2px #a3d3ec;
-    width: 100%;
-    margin-bottom: 60px;
+    width: 65%;
+    margin-bottom: 20px;
 }
 input{
     outline: none;
     border: none;
-    height: 60px;
+    height: 50px;
     padding-left: 30px;
     width: 80%;
 }

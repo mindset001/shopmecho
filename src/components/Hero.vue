@@ -44,7 +44,7 @@ export default {
         padding-left: 10%;
         background-image: url('../assets/background-2.jpg');
         color:#fff;
-        height: 85.5vh;
+        height: 89vh;
     }
     span{
         color: #0077b6;
