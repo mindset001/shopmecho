@@ -6,7 +6,7 @@
     
     </div>
     <div class="second">
-        <h4 style="color:#dfb871;">know About Our Services</h4>    
+        <h4 style="color:#dfb871; font-family:licorice; font-weight: bold;">know About Our Services</h4>    
         <h2 style="color:#000;">  WHAT WE DO</h2>
         <p>
             We are a group of technology enthusiasts who are really passionate about making financial inclusion count
@@ -222,6 +222,7 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&family=Licorice&display=swap');
 .mobile{
     display: none;
 }

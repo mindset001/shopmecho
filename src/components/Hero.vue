@@ -65,7 +65,7 @@ export default {
         padding-bottom: 40px;
     }
     .img{
-        padding-top: 15px;
+        margin-top: -36px;
         width: 20px;
     }
     button{
